@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Web development" />
+    <meta name="keywords" content="HTML Markup" />
+    <meta name="author" content="Methtissage Senura Sandeepa Jans" />
+    <title>Job Application</title>
+    <link rel="stylesheet" type="text/css" href="../styles/stylee.css" />
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="jobs.html">job descriptions </a></li>
+        <li><a href="apply.html">job application</a></li>
+        <li><a href="about.html">personal details</a></li>
+        <li><a href="enhancements.html">any enhancements</a></li>
+      </ul>
+    </nav>
+    <br />
+    <h1 class="box fade-in">Apply For the job</h1>
+    <br />
+    <br />
+    <img
+      class="animate"
+      src="../Images/application.jpeg"
+      alt="Photo of applicationForm"
+      style="width: 20%"
+    />
+    <form action="submit_application.php" method="post"></form>
+    <form
+      method="POST"
+      action="https://mercury.swin.edu.au/it000000/formtest.php"
+    >
+      <label for="refnum">Job Reference Number:</label>
+      <input
+        type="text"
+        id="refnum"
+        name="refnum"
+        pattern="[a-zA-Z0-9]{5}"
+        required
+      />
+      <br />
+      <fieldset>
+        <h2>Personal Information</h2>
+
+        <label for="first_name">First Name:</label>
+        <input
+          type="text"
+          id="first_name"
+          name="first_name"
+          maxlength="20"
+          required
+        /><br /><br />
+
+        <label for="last_name">Last Name:</label>
+        <input
+          type="text"
+          id="last_name"
+          name="last_name"
+          maxlength="20"
+          required
+        /><br /><br />
+
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" name="dob" required /><br /><br />
+
+        <label>Gender:</label>
+        <label for="male">Male</label>
+        <input type="radio" id="male" name="gender" value="male" required />
+        <label for="female">Female</label>
+        <input type="radio" id="female" name="gender" value="female" />
+        <label for="other">Other</label>
+        <input type="radio" id="other" name="gender" value="other" />
+        <br />
+
+        <label for="address">Street Address:</label>
+        <input
+          type="text"
+          id="address"
+          name="address"
+          maxlength="40"
+          required
+        /><br /><br />
+
+        <label for="suburb">Suburb/Town:</label>
+        <input
+          type="text"
+          id="suburb"
+          name="suburb"
+          maxlength="40"
+          required
+        /><br /><br />
+
+        <label for="state">State:</label>
+        <select id="state" name="state" required>
+          <option value="">Select a state</option>
+          <option value="VIC">VIC</option>
+          <option value="NSW">NSW</option>
+          <option value="QLD">QLD</option>
+          <option value="NT">NT</option>
+          <option value="WA">WA</option>
+          <option value="SA">SA</option>
+          <option value="TAS">TAS</option>
+          <option value="ACT">ACT</option></select
+        ><br /><br />
+
+        <label for="postcode">Postcode:</label>
+        <input
+          type="text"
+          id="postcode"
+          name="postcode"
+          minlength="4"
+          maxlength="4"
+          required
+        /><br /><br />
+
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email" required /><br /><br />
+
+        <label for="phone">Phone Number:</label>
+        <input
+          type="tel"
+          id="phone"
+          name="phone"
+          pattern="[0-9\s]{8,12}"
+          required
+        /><br /><br />
+
+        <label>Skills:</label><br />
+
+        <input
+          type="checkbox"
+          id="programming"
+          name="skills[]"
+          value="programming"
+          required
+        />
+        <label for="programming">Programming</label><br />
+
+        <input
+          type="checkbox"
+          id="communication"
+          name="skills[]"
+          value="communication"
+          required
+        />
+        <label for="communication">Communication</label><br />
+
+        <input
+          type="checkbox"
+          id="problem_solving"
+          name="skills[]"
+          value="problem_solving"
+          required
+        />
+        <label for="problem_solving">problem solving</label><br />
+
+        <input
+          type="checkbox"
+          id="HTML"
+          name="skills[]"
+          value="HTML"
+          required
+        />
+        <label for="HTML">HTML</label><br />
+
+        <input type="checkbox" id="CSS" name="skills[]" value="CSS" required />
+        <label for="CSS">CSS</label><br />
+
+        <input
+          type="checkbox"
+          id="JavaScript"
+          name="skills[]"
+          value="JavaScript"
+          required
+        />
+        <label for="JavaScript">JavaScript</label><br />
+
+        <input
+          type="checkbox"
+          id="Other_Skills"
+          name="skills[]"
+          value="Other_Skills"
+          required
+        />
+        <label for="Other_Skills">Other Skills</label><br />
+
+        <label>
+          Please specify:
+          <textarea name="other_skills" rows="5" cols="40"></textarea>
+        </label>
+        <br />
+        <input type="submit" value="Submit" onclick="validateForm()" />
+      </fieldset>
+    </form>
+
+    <br />
+    <br />
+    <br />
+    <br />
+    <footer>
+      <p>&copy; 2023 Ceylon Textile Suppliers (CTS). All rights reserved.</p>
+      <p>
+        Email me at
+        <a href="mailto:104311751@student.swin.edu.au"
+          >Please contact me via email.</a
+        >
+      </p>
+    </footer>
+    <script>
+      const validateForm = () => {};
+    </script>
+  </body>
+</html>

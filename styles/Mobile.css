@@ -1,0 +1,276 @@
+/* Styles for mobile view (screen size less than or equal to 768px) */
+@media (max-width: 768px) {
+  .container {
+    width: 100%;
+    margin: 0;
+    padding: 10px;
+  }
+  nav {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+  }
+
+  nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  nav li {
+    display: inline-block;
+    margin-right: 20px;
+  }
+
+  nav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    text-transform: uppercase;
+  }
+
+  nav a:hover {
+    color: #f00;
+  }
+
+  /* Web Typography */
+  body {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333;
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  h1 {
+    font-size: 36px;
+    margin-top: 50px;
+  }
+
+  h2 {
+    font-size: 24px;
+    margin-top: 30px;
+  }
+
+  p {
+    margin-bottom: 20px;
+  }
+
+  /* Box Model and Visual Formatting */
+  .container {
+    width: 80%;
+    margin: 0 auto;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 20px;
+  }
+
+  /* Liquid Page Layout */
+  @media screen and (max-width: 768px) {
+    /* Menu */
+    nav {
+      display: none;
+    }
+
+    /* Web Typography */
+    body {
+      font-size: 14px;
+    }
+
+    h1 {
+      font-size: 24px;
+      margin-top: 30px;
+    }
+
+    h2 {
+      font-size: 18px;
+      margin-top: 20px;
+    }
+
+    /* Box Model and Visual Formatting */
+    .container {
+      width: 100%;
+      padding: 10px;
+    }
+  }
+  /* Style the main content */
+  main {
+    padding: 20px;
+  }
+
+  .box {
+    border: 1px solid #ccc;
+    padding: 20px;
+    text-align: center;
+    background-color: #fff;
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2);
+    width: 60%;
+    margin: 0 auto;
+  }
+
+  /* Style the footer */
+  footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+  }
+
+  /* set font and background color for the entire page */
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+  }
+  h1 {
+    text-align: center;
+    margin-top: 50px;
+  }
+
+  /* style the box containing the heading */
+  .box {
+    border: 1px solid black;
+    padding: 10px;
+    width: 50%;
+    margin: auto;
+    text-align: center;
+  }
+
+  /* style the image */
+  img {
+    display: block;
+    margin: auto;
+    border: 1px solid black;
+    padding: 5px;
+  }
+
+  /* style the table */
+  table {
+    border-collapse: collapse;
+    margin: auto;
+    width: 80%;
+    margin-top: 50px;
+  }
+
+  table th,
+  table td {
+    border: 1px solid black;
+    padding: 5px;
+    text-align: center;
+  }
+  /* additional styles */
+  .box {
+    background-color: #ffd700;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    color: #333;
+    font-size: 36px;
+    font-weight: bold;
+    width: 400px;
+    margin: auto;
+  }
+
+  .fade-in {
+    opacity: 0;
+    animation: fade-in 2s forwards;
+  }
+
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  /* Form styles */
+  fieldset {
+    border: none;
+    margin: 0;
+    padding: 0;
+  }
+  label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+  }
+  input[type="date"],
+  input[type="email"],
+  input[type="tel"],
+  textarea {
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  input[type="text"] {
+    border: 2px solid red;
+    border-radius: 4px;
+  }
+  input[type="date"] {
+    border: 2px solid red;
+    border-radius: 4px;
+  }
+  input[type="email"] {
+    border: 2px solid red;
+    border-radius: 4px;
+  }
+  input[type="tel"] {
+    border: 2px solid red;
+    border-radius: 4px;
+  }
+  input[type="submit"] {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+  }
+  input[type="submit"]:hover {
+    background-color: #555;
+  }
+
+  strong {
+    color: #0077c0;
+  }
+  /* Style for li element */
+  li {
+    margin-bottom: 5px;
+  }
+  img {
+    border-radius: 8px;
+  }
+  .animate {
+    animation-name: zoom;
+    animation-duration: 2s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+  }
+
+  @keyframes zoom {
+    0% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(1.2);
+    }
+  }
+  ul {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    list-style: disc;
+    padding-left: 20px;
+  }
+}
