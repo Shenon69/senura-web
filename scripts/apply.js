@@ -17,26 +17,18 @@ function validateForm() {
     monthDiff < 0 ||
     (monthDiff === 0 && today.getDate() < birthDate.getDate())
   ) {
-    age--;
-  }
-
-  // Validate age (must be between 15 and 80)
-  if (age < 15 || age > 80) {
     document.getElementById("dob-error").textContent =
-      "*Applicants must be at between 15 and 80 years old";
+      "*Applicants must be between 15 and 80 years old";
     return false;
   } else {
-    document.getElementById("dob-error").textContent = " ";
+    document.getElementById("dob-error").textContent = "";
   }
 
-  //state validation
   var state = document.getElementById("state").value;
   var postcode = document.getElementById("postcode").value;
-
-  // Get the first digit of the postcode
   var firstDigit = parseInt(postcode.charAt(0));
 
-  // Validate that the selected state matches the first digit of the postcode
+  // Validate state and postcode
   if (
     (state === "VIC" && !(firstDigit === 3 || firstDigit === 8)) ||
     (state === "NSW" && !(firstDigit === 1 || firstDigit === 2)) ||
@@ -48,17 +40,16 @@ function validateForm() {
     (state === "ACT" && firstDigit !== 0)
   ) {
     document.getElementById("postcode-error").textContent =
-      "*The selected state dose not match the first digit of the post code";
+      "*The selected state does not match the first digit of the postcode";
     return false;
   } else {
-    document.getElementById("postcode-error").textContent = " ";
+    document.getElementById("postcode-error").textContent = "";
   }
 
-  //skills validation
+  // Validate other skills checkbox and textarea
   var otherSkillsCheckbox = document.getElementById("Other_Skills");
   var otherSkillsTextarea = document.getElementsByName("other_skills")[0];
 
-  // Check if the "Other skills..." checkbox is selected
   if (otherSkillsCheckbox.checked && otherSkillsTextarea.value.trim() === "") {
     document.getElementById("otherSkills-error").textContent =
       "*Please specify your other skills.";
@@ -67,7 +58,26 @@ function validateForm() {
     document.getElementById("otherSkills-error").textContent = "";
   }
 
-  return true;
+  // Check if at least one skill checkbox is checked
+  var skillsCheckboxes = document.getElementsByName("skills[]");
+  var skillsChecked = false;
+
+  for (var i = 0; i < skillsCheckboxes.length; i++) {
+    if (skillsCheckboxes[i].checked) {
+      skillsChecked = true;
+      break;
+    }
+  }
+
+  if (!skillsChecked) {
+    document.getElementById("skills-error").textContent =
+      "*Please select at least one skill.";
+    return false;
+  } else {
+    document.getElementById("skills-error").textContent = "";
+  }
+
+  return true; // Allow form submission if all validations pass
 }
 
 // JavaScript code to store and retrieve applicant details using Session Storage
