@@ -33,15 +33,10 @@
     <form
       method="POST"
       action="https://mercury.swin.edu.au/it000000/formtest.php"
+      id="application-form"
     >
       <label for="refnum">Job Reference Number:</label>
-      <input
-        type="text"
-        id="refnum"
-        name="refnum"
-        pattern="[a-zA-Z0-9]{5}"
-        required
-      />
+      <input type="text" id="refnum" name="refnum" readonly required />
       <br />
       <fieldset>
         <h2>Personal Information</h2>

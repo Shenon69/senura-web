@@ -1,3 +1,10 @@
+// Retrieve the job reference number from Local Storage
+var refNum = localStorage.getItem("refNum");
+
+// Set the value of the job reference number field
+var refNumField = document.getElementById("refnum");
+refNumField.value = refNum;
+
 function validateForm() {
   var dob = document.getElementById("dob").value;
 
@@ -62,3 +69,34 @@ function validateForm() {
 
   return true;
 }
+
+// JavaScript code to store and retrieve applicant details using Session Storage
+var form = document.getElementById("application-form");
+
+// Event listener for form submission
+form.addEventListener("submit", function (event) {
+  event.preventDefault(); // Prevent default form submission
+  var formData = new FormData(form); // Get form data
+
+  // Store form data in Session Storage
+  for (var pair of formData.entries()) {
+    sessionStorage.setItem(pair[0], pair[1]);
+  }
+
+  // Redirect the user to another page or perform other actions
+});
+
+// Retrieve and populate form fields with stored data when the apply.html page is loaded
+window.addEventListener("load", function () {
+  var formFields = document.querySelectorAll("input, textarea, select");
+
+  // Loop through form fields and retrieve stored data from Session Storage
+  formFields.forEach(function (field) {
+    var storedValue = sessionStorage.getItem(field.name);
+
+    // Populate form field with stored value
+    if (storedValue) {
+      field.value = storedValue;
+    }
+  });
+});
